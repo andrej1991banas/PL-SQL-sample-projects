@@ -1,6 +1,13 @@
 --TAKE PROGRAMMERS FROM EMPLOYEES TABLE, CREATE A NEW TABLE AND MOVE PROGRAMMERS 
 --INTO THE NEW TABLE, SHOW THEIR NAMES, USE LOOP PROCEDURE
 
+CREATE TABLE programmers (
+    first_name       VARCHAR2(255 BYTE),
+    lst_name VARCHAR2(255 BYTE)
+); --CREATING NEW TABLE FOR STORING DATA
+
+
+--CREATING PROCEDURE 
 CREATE OR REPLACE PROCEDURE proc_cur_prog AS
     CURSOR cur_prog IS
     SELECT
@@ -8,7 +15,7 @@ CREATE OR REPLACE PROCEDURE proc_cur_prog AS
     FROM
         employees
     WHERE
-        job_title = 'Programmer';
+        job_title = 'Programmer'; -- CURSOR
 
     rec_prog     employees%rowtype;
     n_pocet_ludi NUMBER;
