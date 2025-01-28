@@ -2,6 +2,10 @@
 
 --VYPIS CISLA OD 1 DO 20
 
+
+--FOR LOOP
+
+
 CREATE OR REPLACE PROCEDURE proc_for_loop AS
 BEGIN
     FOR pocet IN 1..20 LOOP
@@ -13,6 +17,11 @@ EXCEPTION
 END;
 
 EXECUTE proc_for_loop();
+
+
+
+--WHILE LOOP
+
 
 CREATE OR REPLACE PROCEDURE proc_while_loop AS
     pocet PLS_INTEGER := 0;
